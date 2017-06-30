@@ -1,0 +1,22 @@
+{
+  "name": "zillion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "zillion test",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "z"
+  ],
+  "author": "zillion",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "google-images": "^2.1.0",
+    "mongoose": "^4.11.0",
+    "request": "^2.81.0"
+  }
+}

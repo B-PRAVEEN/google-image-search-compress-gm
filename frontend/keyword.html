@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="zillion">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zillion Keywords</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./bower_components/materialize/dist/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="./bower_components/angular-carousel/dist/angular-carousel.css" rel="stylesheet" type="text/css" />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.css' type='text/css' media='all' />
+</head>
+
+<body ng-controller="keywordCtrl">
+  <div class="navbar-fixed">
+    <nav class="blue darken-4">
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo">Zillion</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="keyword.html">Keywords</a></li>
+
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="keyword.html">Keywords</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+
+  <div class="container center">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 left-align">
+          <h4 class="header">Keywords</h4>
+          <div class="collection with-header">
+            <a href="#!" ng-click="datByKeyword(key.searchData)" class="collection-item" ng-repeat="key in keywords">{{key.keyword}}</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="row">
+        <div class="col s12 left-align">
+          <table class="highlight">
+            <tr>
+              <td>Url</td>
+              <td>Preview</td>
+
+            </tr>
+            <tr ng-repeat="img in images">
+              <td><a href="https://zillion-bpraveen.c9users.io/images/{{img.fileName}}">{{img.fileName}}</a></td>
+              <td><img class="circle" width=50px; height=50px src="https://zillion-bpraveen.c9users.io/images/{{img.fileName}}"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+   <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">For Zillion</p>
+        </div>
+       
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2014 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="./bower_components/materialize/dist/js/materialize.min.js"></script>
+  <script src="js/init.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script type="text/javascript" src="./controller/zillionMainCtrl.js"></script>
+  <script src="./bower_components/angular-touch/angular-touch.js"></script>
+  <script src="./bower_components/angular-carousel/dist/angular-carousel.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.js'></script>
+
+</body>
+
+</html>

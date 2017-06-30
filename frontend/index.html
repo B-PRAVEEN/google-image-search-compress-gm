@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="zillion">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zillion Search Image</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./bower_components/materialize/dist/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="./bower_components/angular-carousel/dist/angular-carousel.css" rel="stylesheet" type="text/css" />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.css' type='text/css' media='all' />
+
+</head>
+
+<body ng-controller="MainCtrl">
+  <div class="navbar-fixed">
+    <nav class="blue darken-4">
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo">Zillion</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="keyword.html">Keywords</a></li>
+
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="keyword.html">Keywords</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div id="index-banner" class="back">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <form ng-submit="search()">
+          <br><br>
+          <h1 class="header center white-text text-lighten-2">Search Image</h1>
+          <div class="row center">
+
+            <div class="input-field">
+              <input id="search" class="search black-text" type="search" ng-model="data" required>
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            </div>
+
+          </div>
+          <div class="row center">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Search
+            <i class="material-icons right">cloud</i>
+          </button>
+          </div>
+        </form>
+        <br><br>
+      </div>
+    </div>
+  </div>
+
+  <div class="container center">
+    <div class="section">
+      <div class="row">
+        <table class="highlight">
+          <tr>
+            <td>Url</td>
+            <td>Preview</td>
+            <td>Size</td>
+            <td>Type</td>
+          </tr>
+          <tr ng-repeat="img in images">
+            <td>{{img.url}}</td>
+            <td><img class="circle" width=150px; height=150px src="{{img.url}}"></td>
+            <td>{{img.size}}</td>
+            <td>{{img.type}}</td>
+          </tr>
+        </table>
+      </div>
+    </div> <br><br><br>
+  </div>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">For Zillion</p>
+        </div>
+       
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2014 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="./bower_components/materialize/dist/js/materialize.min.js"></script>
+  <script src="js/init.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script type="text/javascript" src="./controller/zillionMainCtrl.js"></script>
+  <script src="./bower_components/angular-touch/angular-touch.js"></script>
+  <script src="./bower_components/angular-carousel/dist/angular-carousel.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.js'></script>
+  
+</body>
+
+</html>
